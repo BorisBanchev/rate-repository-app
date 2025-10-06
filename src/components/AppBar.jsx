@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
 const AppBarTab = ({ children, to }) => {
   return (
     <Link to={to} style={styles.tab}>
-      <Text color="textSecondary" fontWeight="bold" fontSize="subheading">
+      <Text color="textAppBar" fontWeight="bold" fontSize="subheading">
         {children}
       </Text>
     </Link>
