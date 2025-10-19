@@ -73,19 +73,27 @@ const RepositoryStats = ({
 }) => (
   <View style={styles.statsRow}>
     <View style={styles.statItem}>
-      <Text style={styles.statValue}>{formatCount(stargazersCount)}</Text>
+      <Text testID="stargazersCount" style={styles.statValue}>
+        {formatCount(stargazersCount)}
+      </Text>
       <Text style={styles.statLabel}>Stars</Text>
     </View>
     <View style={styles.statItem}>
-      <Text style={styles.statValue}>{formatCount(forksCount)}</Text>
+      <Text testID="forksCount" style={styles.statValue}>
+        {formatCount(forksCount)}
+      </Text>
       <Text style={styles.statLabel}>Forks</Text>
     </View>
     <View style={styles.statItem}>
-      <Text style={styles.statValue}>{reviewCount}</Text>
+      <Text testID="reviewCount" style={styles.statValue}>
+        {reviewCount}
+      </Text>
       <Text style={styles.statLabel}>Reviews</Text>
     </View>
     <View style={styles.statItem}>
-      <Text style={styles.statValue}>{ratingAverage}</Text>
+      <Text testID="ratingAverage" style={styles.statValue}>
+        {ratingAverage}
+      </Text>
       <Text style={styles.statLabel}>Rating</Text>
     </View>
   </View>
@@ -102,13 +110,19 @@ const RepositoryItem = ({
   ownerAvatarUrl,
 }) => {
   return (
-    <View style={styles.container}>
+    <View testID="repositoryItem" style={styles.container}>
       <View style={styles.topRow}>
         <Image source={{ uri: ownerAvatarUrl }} style={styles.avatar} />
         <View style={styles.info}>
-          <Text style={styles.fullName}>{fullName}</Text>
-          <Text style={styles.description}>{description}</Text>
-          <Text style={styles.languageTag}>{language}</Text>
+          <Text testID="fullName" style={styles.fullName}>
+            {fullName}
+          </Text>
+          <Text testID="description" style={styles.description}>
+            {description}
+          </Text>
+          <Text testID="language" style={styles.languageTag}>
+            {language}
+          </Text>
         </View>
       </View>
       <RepositoryStats
