@@ -56,6 +56,7 @@ const AppBar = () => {
     <View style={styles.container}>
       <ScrollView horizontal contentContainerStyle={{ flexDirection: "row" }}>
         <AppBarTab to="/">Repositories</AppBarTab>
+        {data?.me && <AppBarTab to="/create-review">Create a review</AppBarTab>}
         {data?.me ? (
           <AppBarTab onPress={handleSignOut}>Sign out</AppBarTab>
         ) : (
