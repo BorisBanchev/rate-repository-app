@@ -1,7 +1,6 @@
-import React from "react-native";
 import { FlatList, View, StyleSheet, Pressable, TextInput } from "react-native";
 import { Picker } from "@react-native-picker/picker";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-native";
 import { useDebounce } from "use-debounce";
 import RepositoryItem from "./RepositoryItem";
